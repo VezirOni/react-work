@@ -56,3 +56,22 @@ let araba = new Araba("siyah");
 console.log(araba.renk); // "siyah"
 console.log(araba.hız); // 0
 ```
+
+## Inheritance Class
+
+```js
+class Araba {
+    constructor(renk) {
+        this.renk = renk;
+    }
+}
+class MotorluAraba extends Araba {
+    constructor(renk, motor) {
+        super(renk);
+        this.motor = motor;
+    }
+}
+let araba = new MotorluAraba("siyah", "V8");
+console.log(araba.renk); // "siyah"
+console.log(araba.motor); // "V8"
+```
