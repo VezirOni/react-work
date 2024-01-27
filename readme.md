@@ -16,3 +16,43 @@ export const tutorial = (name, age) => {
 
 };
 ```
+
+## Class
+
+- ES6
+
+```js
+class Araba {
+    constructor(renk) {
+        this.renk = renk;
+        this.hız = 0;
+    }
+
+    hızlandır() {
+        this.hız += 10;
+    }
+}
+let araba = new Araba("siyah");
+console.log(araba.renk); // "siyah"
+console.log(araba.hız); // 0
+araba.hızlandır();
+console.log(araba.hız); // 10
+
+```
+
+- ES5
+
+```js
+function Araba(renk) {
+    this.renk = renk;
+    this.hız = 0;
+}
+
+Araba.prototype.hızlandır = function() {
+    this.hız += 10;
+};
+
+let araba = new Araba("siyah");
+console.log(araba.renk); // "siyah"
+console.log(araba.hız); // 0
+```
